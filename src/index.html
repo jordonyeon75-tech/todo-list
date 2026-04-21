@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow // Premium To-Do</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app-container">
+    <header>
+        <h1>TaskFlow</h1>
+        <p>Master your productivity</p>
+    </header>
+
+    <section class="input-card">
+        <div class="form-group">
+            <input type="text" id="taskTitle" placeholder="What needs to be done?">
+            <textarea id="taskDesc" placeholder="Add some details (optional)..." rows="2"></textarea>
+        </div>
+
+        <div class="form-controls">
+            <select id="taskPriority">
+                <option value="Low">Low Priority</option>
+                <option value="Medium">Medium Priority</option>
+                <option value="High">High Priority</option>
+            </select>
+            <button id="saveBtn" onclick="saveTask()">Add Task</button>
+        </div>
+    </section>
+
+    <section class="list-container">
+        <div class="list-header">
+            <h2>Your Tasks</h2>
+            <span id="taskCount">0 Tasks</span>
+        </div>
+        <div id="taskList">
+        </div>
+    </section>
+</div>
+
+<script src="script.js"></script>
+<div id="toast" class="toast-hidden">
+    <div class="toast-content">
+        <span class="toast-icon">⚠️</span>
+        <span id="toastMessage">Please enter a task title.</span>
+    </div>
+</div>
+</body>
+</html>
